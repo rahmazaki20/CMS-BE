@@ -1,0 +1,3 @@
+package com.cms.config;
+import com.cms.entity.*; import com.cms.repository.UserRepository; import lombok.RequiredArgsConstructor; import org.springframework.boot.CommandLineRunner; import org.springframework.security.crypto.password.PasswordEncoder; import org.springframework.stereotype.Component;
+@Component @RequiredArgsConstructor public class DataLoader implements CommandLineRunner { private final UserRepository repo; private final PasswordEncoder encoder; public void run(String... args){ if(repo.findByUsername("admin").isEmpty()) repo.save(User.builder().username("admin").password(encoder.encode("admin123")).role(UserRole.ADMIN).build()); } }

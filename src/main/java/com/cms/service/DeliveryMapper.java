@@ -1,0 +1,1 @@
+package com.cms.service; import com.cms.dto.DeliveryResponse; import com.cms.entity.Delivery; import org.mapstruct.Mapper; @Mapper(componentModel="spring") public interface DeliveryMapper { DeliveryResponse toResponse(Delivery e); }

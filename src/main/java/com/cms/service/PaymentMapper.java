@@ -1,0 +1,1 @@
+package com.cms.service; import com.cms.dto.PaymentResponse; import com.cms.entity.Payment; import org.mapstruct.Mapper; @Mapper(componentModel="spring") public interface PaymentMapper { PaymentResponse toResponse(Payment e); }

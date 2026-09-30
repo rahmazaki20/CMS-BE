@@ -1,0 +1,1 @@
+package com.cms.service; import com.cms.dto.CategoryResponse; import com.cms.entity.Category; import org.mapstruct.Mapper; @Mapper(componentModel="spring") public interface CategoryMapper { CategoryResponse toResponse(Category e); }
